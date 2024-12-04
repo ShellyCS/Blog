@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 -- INSERT VALUES INTO USERS TABLE
-INSERT INTO users (username, email, password, img) VALUES ('johndoe', 'john.doe@example.com', 'pwd123', NULL);
+ALTER TABLE users AUTO_INCREMENT = 1;
 
 INSERT INTO users (username, email, password, img) VALUES
 ('jane_doe', 
@@ -63,6 +63,8 @@ CREATE TABLE IF NOT EXISTS posts (
 
 
 -- INSERT VALUES IN POSTS
+ALTER TABLE posts AUTO_INCREMENT = 1;
+
 INSERT INTO posts (title, `desc`, img, cat, uid)
 VALUES
     ("Understanding JavaScript Closures", "In this post, we'll explore closures in JavaScript, a powerful concept that allows functions to retain access to their lexical environment.", "https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg", "Programming", 2),
