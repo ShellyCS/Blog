@@ -65,10 +65,19 @@ CREATE TABLE IF NOT EXISTS posts (
 -- INSERT VALUES IN POSTS
 ALTER TABLE posts AUTO_INCREMENT = 1;
 
+-- INSERT VALUES IN POSTS WITH NEW CATEGORIES
+ALTER TABLE posts AUTO_INCREMENT = 1;
+
 INSERT INTO posts (title, `desc`, img, cat, uid)
 VALUES
-    ("Understanding JavaScript Closures", "In this post, we'll explore closures in JavaScript, a powerful concept that allows functions to retain access to their lexical environment.", "https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg", "Programming", 2),
+    ("Exploring the Renaissance Art Movement", "An in-depth look at the Renaissance period, exploring its art, history, and impact on the world.", "https://images.pexels.com/photos/6501177/pexels-photo-6501177.jpeg", "Art", 2),
+    
+    ("The Role of Science in Modern Medicine", "This post discusses how scientific advancements have revolutionized the field of medicine and improved lives.", "https://images.pexels.com/photos/256379/pexels-photo-256379.jpeg", "Science", 3),
+    
     ("The Future of Artificial Intelligence", "AI is transforming various industries. This post discusses the future potential and challenges faced by AI technologies.", "https://images.pexels.com/photos/6489663/pexels-photo-6489663.jpeg", "Technology", 3),
-    ("Healthy Eating Tips for Busy Professionals", "A quick guide to maintaining a healthy diet while juggling a busy work schedule.", "https://images.pexels.com/photos/4230630/pexels-photo-4230630.jpeg", "Lifestyle", 4),
-    ("Top 5 Business Strategies for 2024", "In this post, we discuss the latest business strategies that will help organizations stay competitive in 2024.", "https://images.pexels.com/photos/6157049/pexels-photo-6157049.jpeg", "Business", 5);
-
+    
+    ("Healthy Eating Tips for Busy Professionals", "A quick guide to maintaining a healthy diet while juggling a busy work schedule.", "https://images.pexels.com/photos/4230630/pexels-photo-4230630.jpeg", "Food", 4),
+    
+    ("Top 5 Films to Watch in 2024", "A list of must-watch films releasing in 2024, ranging from blockbusters to indie gems.", "https://images.pexels.com/photos/6501135/pexels-photo-6501135.jpeg", "Cinema", 5),
+    
+    ("Design Thinking: An Introduction", "An exploration of the design thinking methodology and its application in creative problem-solving.", "https://images.pexels.com/photos/1591067/pexels-photo-1591067.jpeg", "Design", 2);
