@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Home = () => {
@@ -20,6 +20,9 @@ const Home = () => {
     };
     fetchData();
   }, [cat]);
+
+  const navigate = useNavigate();
+
   // const posts = [
   //   {
   //     id: 1,
@@ -52,6 +55,10 @@ const Home = () => {
     return doc.body.textContent;
   };
 
+  const handleClickPost = (post) => {
+    navigate(`/post/${post.id}`);
+  };
+
   return (
     <div className="home">
       <div className="posts">
@@ -65,8 +72,10 @@ const Home = () => {
               <Link className="link" to={`/post/${post.id}`}>
                 <h1>{post.title}</h1>
               </Link>
-              <p>{getText(post.desc)}</p>
-              <button>Read More</button>
+              <br />
+              <p className="postDesc">{getText(post.desc)}</p>
+              <br />
+              <button onClick={() => handleClickPost(post)}>Read More</button>
             </div>
           </div>
         ))}

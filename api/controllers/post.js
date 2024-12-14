@@ -14,6 +14,7 @@ export const getPosts = (req, res) => {
 };
 
 export const getPost = (req, res) => {
+  console.log("get post called...");
   const q =
     "SELECT p.id, `username`, `title`, `desc`, p.img, u.img AS userImg, `cat`,`date` FROM users u JOIN posts p ON u.id = p.uid WHERE p.id = ? ";
 
@@ -26,6 +27,8 @@ export const getPost = (req, res) => {
 
 export const addPost = (req, res) => {
   const token = req.cookies.access_token;
+  console.log("add post called...");
+  console.log(token);
   if (!token) return res.status(401).json("Not authenticated!");
 
   jwt.verify(token, "jwtkey", (err, userInfo) => {
@@ -52,6 +55,8 @@ export const addPost = (req, res) => {
 
 export const deletePost = (req, res) => {
   const token = req.cookies.access_token;
+  console.log("dlete called...");
+  console.log(token);
   if (!token) return res.status(401).json("Not authenticated!");
 
   jwt.verify(token, "jwtkey", (err, userInfo) => {

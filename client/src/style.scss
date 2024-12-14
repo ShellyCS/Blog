@@ -3,15 +3,16 @@ $lightGreen: #b9e7e7;
 .app {
   display: flex;
   justify-content: center;
+
   .container {
-    width: 1024px;
+    width: 1024px; // Default width for large screens
 
     .link {
       text-decoration: none;
       color: inherit;
     }
-    //LOGIN & REGISTER
 
+    //LOGIN & REGISTER
     .auth {
       display: flex;
       flex-direction: column;
@@ -62,18 +63,19 @@ $lightGreen: #b9e7e7;
     }
 
     //NAVBAR
-
     .navbar {
       .container {
         padding: 10px 0px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         .logo {
           img {
             width: 120px;
           }
         }
+
         .links {
           display: flex;
           align-items: center;
@@ -110,7 +112,6 @@ $lightGreen: #b9e7e7;
     }
 
     //FOOTER
-
     footer {
       margin-top: 100px;
       padding: 20px;
@@ -119,13 +120,13 @@ $lightGreen: #b9e7e7;
       align-items: center;
       justify-content: space-between;
       font-size: 12px;
+
       img {
         height: 50px;
       }
     }
 
     //HOME
-
     .home {
       .posts {
         margin-top: 50px;
@@ -138,7 +139,7 @@ $lightGreen: #b9e7e7;
           gap: 100px;
 
           &:nth-child(2n + 1) {
-            flex-direction: row-reverse;
+            // flex-direction: row-reverse;
           }
 
           .img {
@@ -198,7 +199,6 @@ $lightGreen: #b9e7e7;
     }
 
     //SINGLE
-
     .single {
       display: flex;
       gap: 50px;
@@ -220,6 +220,7 @@ $lightGreen: #b9e7e7;
           align-items: center;
           gap: 10px;
           font-size: 14px;
+
           img {
             width: 50px;
             height: 50px;
@@ -253,6 +254,7 @@ $lightGreen: #b9e7e7;
           line-height: 30px;
         }
       }
+
       .menu {
         flex: 2;
         display: flex;
@@ -299,7 +301,6 @@ $lightGreen: #b9e7e7;
     }
 
     //WRITE
-
     .add {
       margin-top: 20px;
       display: flex;
@@ -364,6 +365,7 @@ $lightGreen: #b9e7e7;
               border: 1px solid teal;
               padding: 3px 5px;
             }
+
             :last-child {
               cursor: pointer;
               color: white;
@@ -380,6 +382,127 @@ $lightGreen: #b9e7e7;
             color: teal;
           }
         }
+      }
+    }
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .app {
+    .container {
+      width: 90%; // Adjust width to take up 90% of the screen
+    }
+
+    .home {
+      .posts {
+        gap: 50px; // Reduce gap on tablets
+
+        .post {
+          flex-direction: column; // Stack image and content vertically
+          gap: 30px;
+
+          .content {
+            flex: none;
+            width: 100%; // Ensure content takes full width
+            h1 {
+              font-size: 32px; // Smaller font size for tablets
+            }
+
+            p {
+              font-size: 16px; // Adjust paragraph size
+            }
+          }
+
+          .img {
+            width: 100%; // Ensure image takes full width
+            max-height: none;
+          }
+        }
+      }
+    }
+
+    .single {
+      display: block; // Stack content and menu vertically on tablets
+
+      .content,
+      .menu {
+        flex: none;
+        width: 100%; // Ensure both content and menu take full width
+      }
+    }
+
+    .add {
+      display: block; // Stack content and menu vertically
+      gap: 10px;
+
+      .content,
+      .menu {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .app {
+    .container {
+      width: 100%; // Make container full width on mobile
+    }
+
+    .home {
+      .posts {
+        gap: 20px; // Reduce gap even further
+
+        .post {
+          flex-direction: column; // Stack content and image
+          gap: 20px;
+
+          .content {
+            flex: none;
+            width: 100%; // Full width content
+
+            h1 {
+              font-size: 24px; // Even smaller font size
+            }
+
+            p {
+              font-size: 14px; // Adjust font size for mobile
+            }
+
+            button {
+              width: 100%; // Full-width button
+            }
+          }
+
+          .img {
+            width: 100%; // Full-width image
+            max-height: none;
+          }
+        }
+      }
+    }
+
+    .single {
+      display: block; // Stack content and menu vertically
+
+      .content,
+      .menu {
+        width: 100%;
+      }
+
+      .content h1 {
+        font-size: 28px; // Adjust header size
+      }
+    }
+
+    .add {
+      .content,
+      .menu {
+        width: 100%;
       }
     }
   }
