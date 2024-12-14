@@ -1,3 +1,5 @@
+-- Run the following sql code in your local mysql and for posts images we have aws s3 setup 
+
 -- Drop the database if it exists
 DROP DATABASE IF EXISTS blog;
 
