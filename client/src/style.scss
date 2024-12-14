@@ -176,6 +176,14 @@ $lightGreen: #b9e7e7;
 
             p {
               font-size: 18px;
+              font-size: 18px; /* Set the font size */
+              display: -webkit-box; /* Use a flexbox model for multiline handling */
+              -webkit-line-clamp: 3; /* Limit the content to 3 lines */
+              -webkit-box-orient: vertical; /* Make the box display vertically */
+              overflow: hidden; /* Hide overflowing text */
+              text-overflow: ellipsis; /* Add ellipsis after the third line */
+              line-height: 1.5; /* Optional: Adjust line height for readability */
+              max-height: 4.5em;
             }
 
             button {
