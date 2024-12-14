@@ -108,6 +108,22 @@ $lightGreen: #b9e7e7;
             }
           }
         }
+        /* Hamburger Icon */
+        .hamburger {
+          display: none;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 25px;
+          height: 20px;
+          cursor: pointer;
+
+          .bar {
+            width: 100%;
+            height: 3px;
+            background-color: teal;
+            border-radius: 5px;
+          }
+        }
       }
     }
 
@@ -429,6 +445,27 @@ $lightGreen: #b9e7e7;
             max-height: none;
           }
         }
+      }
+    }
+
+    .navbar {
+      .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: $lightGreen;
+      }
+
+      .hamburger {
+        display: flex; /* Show hamburger on small screens */
       }
     }
 
