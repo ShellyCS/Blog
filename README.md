@@ -1,6 +1,4 @@
-Submission by:
-Saily Jadhav
-Nitant Bhagat
-Vismaykumar Patel
-Tarun Chegu
-Steve Fleur
+# Project Title
+
+## Submission by:
+**Saily Jadhav**, **Nitant Bhagat**, **Vismaykumar Patel**, **Tarun Chegu**, **Steve Fleur**
